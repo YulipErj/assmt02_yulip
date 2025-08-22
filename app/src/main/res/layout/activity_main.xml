@@ -3,67 +3,121 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="16dp">
 
-    <!-- First number input -->
-    <EditText
-        android:id="@+id/editTextNumber1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter first number"
-        android:inputType="numberDecimal" />
-
-    <!-- Second number input -->
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter second number"
-        android:inputType="numberDecimal" />
-
-    <!-- Buttons row -->
+    <!-- Row 1: First Number : ________ -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/lblFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Number : "
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etFirstNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal|numberSigned"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <!-- Row 2: Second Number : ________ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/lblSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second Number : "
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etSecondNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal|numberSigned"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <!-- Row 3: Result : ________ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/lblResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result : "
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etResult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:inputType="none"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <!-- Row 4: ADD | SUBTRACT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
 
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:layout_weight="1"
+            android:text="ADD" />
 
         <Button
-            android:id="@+id/btnSub"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Subtract"
-            android:layout_marginLeft="10dp" />
-
-        <Button
-            android:id="@+id/btnMul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Multiply"
-            android:layout_marginLeft="10dp" />
-
-        <Button
-            android:id="@+id/btnDiv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Divide"
-            android:layout_marginLeft="10dp" />
+            android:layout_weight="1"
+            android:text="SUBTRACT" />
     </LinearLayout>
 
-    <!-- Result display -->
-    <TextView
-        android:id="@+id/txtResult"
+    <!-- Row 5: MULTIPLY | DIVIDE -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Result will be shown here"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MULTIPLY" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DIVIDE" />
+    </LinearLayout>
 
 </LinearLayout>
